@@ -80,7 +80,7 @@ def find_path():
 
     try:
         result = subprocess.run(
-            ['integrated.exe', algorithm, source, destination],
+            ['./integrated', algorithm, source, destination],
             capture_output=True,
             text=True,
             check=True
@@ -215,3 +215,4 @@ def logout():
 if __name__ == '__main__':
     init_db()  # Create the database table if it doesn't exist
     app.run(debug=True)
+
